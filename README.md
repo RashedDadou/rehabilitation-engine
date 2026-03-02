@@ -1,4 +1,4 @@
-### The rehabilitation-engine design project  
+## The rehabilitation-engine design project ##
 
 This project represents an evolution of the "Refine" iterative regeneration algorithm for designed images, which began its initial design phase in July 2025, at a time when traditional AI.Prompt image generators did not utilize this technology.
 
@@ -35,9 +35,7 @@ It's a smart and practical algorithm. 100% focus on dead areas (weak_mask + dead
 Three pulses (or fewer) give the image a "life-breathing" feel, not just a static filter. Fast and suitable for everyday use
 Without lengthy repetitions → Executes in seconds (0.5–4 seconds on an average CPU), making it competitive with traditional tools in speed, unlike classic GA which takes minutes.
 
-The design concept was implemented on March 3, 2026
-
 In other words: The concept now has a strong personality, an innovative approach, and is much more practical compared to the first version.
-
-Expected results (realistic percentages – 2026)
 Based on similar experiments + code analysis + comparison with popular tools (CodeFormer, GFPGAN, LaMa, Adetailer, Topaz, Upscayl):
+
+The design concept was implemented on March 3, 2026
