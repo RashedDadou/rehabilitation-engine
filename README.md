@@ -1,4 +1,4 @@
-## The rehabilitation-engine design project ##.
+## The rehabilitation-engine design project ## 
 
 This project represents a development of the "Refine" iterative regeneration algorithm, whose initial design phase began in July 2025, a time when conventional power generation engines did not utilize this technology.
 
