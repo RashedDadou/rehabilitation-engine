@@ -1,4 +1,4 @@
-### The Rehabilitation Engine Design Project ###
+# The Rehabilitation Engine Design Project 
 
 This project represents an evolution of the "Refine" iterative regeneration algorithm for AI-generated images, which began its initial design phase in July 2025, during a time when traditional AI prompt-based image generators lacked advanced post-processing capabilities. 
 
