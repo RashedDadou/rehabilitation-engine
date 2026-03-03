@@ -69,4 +69,91 @@ Pulsed revival tends to cause over-smoothing and random interference across the 
 By 2026 standards, layered approaches are much closer to state-of-the-art perceptual restoration research (SwinIR, SUPIR, multi-scale diffusion models) and significantly increase compatibility with next-generation backbones like Flux.1 or SD3.
 When implemented as suggested (layered genetic revival as the initial strong batch + subsequent pulsed refinement), final results achieve noticeably higher quality in 70–85% of cases — particularly on images suffering from heavy distortion, large dead zones, or complex semantic boundaries.
 
+# Rehabilitation Engine
+
+An AI-powered automatic image rehabilitation engine.
+
+Aims to reduce artifacts, enhance details, improve sharpness, and increase image compatibility with prompts.
+
+## Key Features (Currently)
+
+- Automatic detection of weak areas (Laplacian variance)
+- Dynamically calculates the number of duplicates based on faces, weakness, and CLIP score
+- Supports modes: full/light/fast
+- Evolutionary enhancement
+- Text reports, PDFs, and visual comparisons
+
+## Composition
+
+# Rehabilitation Engine
+**Automatic multi-stage rehabilitation engine for AI-generated images**
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: [Experimental](https://img.shields.io/badge/Status-Experimental-orange)](https://github.com/yourusername/rehabilitation-engine)
+
+## Scientific Summary
+
+The Rehabilitation Engine is a post-generation refinement system specifically designed to correct common distortions in images generated using diffusion models (artifacts, dead zones, color inconsistencies, poor detail, and partial anatomical distortions).
+
+The engine is based on a **multi-stage hybrid approach** that combines:
+
+1. **Precise diagnostic detection** (Laplacian variance + CLIP alignment + face detection)
+2. **DNA-inspired revival** operating on discrete frequency levels and channels (YCbCr or RGB modulation)
+3. **Pulsed refinement** using modern inpainting models with descending strength scheduling and early stop using LPIPS
+4. **Classic and specialized enhancements** (face restoration, text sharpening, symmetry correction, color balancing)
+
+Primary scientific purpose:
+
+To minimize the need for complete regeneration and conserve computing resources while maintaining the highest possible degree of compatibility with the original prompt.
+
+## Key Features (Currently – March 2026)
+
+- Automatic detection of weak and dead areas using Laplacian variance
+- Dynamic counting of pulses and repetitions based on weakness percentage + number of faces + CLIP compatibility
+- Stratified gene regeneration (channel-wise/YCbCr-aware) instead of traditional random pulsed regeneration
+- Pulsed regeneration sequence with strength scheduling downward + LPIPS-guided early stopping
+- Support for multiple inpainting models (LaMa, SD-inpaint, cv2 fallback)
+- Comprehensive diagnostic reports (txt + pdf) + before/after visual comparisons
+- Modular architecture allowing for the later addition of ControlNet/Tile/MultiDiffusion
+
+## Requirements
+
+```text
+Python >= 3.10
+pillow >= 10.0
+numpy >= 1.24
+opencv-python >= 4.8
+torch >= 2.0 (Optional – for CLIP and LPIPS)
+transformers >= 4.35 (Optional – for CLIP)
+lpips (Optional – perceptual loss)
+facexlib (Optional – face enhancement)
+lama-cleaner or diffusers (Optional – inpainting)
+reportlab (Optional – PDF reports)
+
+# Preferred method (with poetry)
+git clone https://github.com/yourusername/rehabilitation-engine.git
+cd rehabilitation-engine
+poetry install
+
+# Or pip with extras
+pip install -e .[clip,face,inpainting,reporting]
+
+src/rehab_engine/
+├── __init__.py
+├── engine.py # Main class + pipeline logic
+├── diagnostics.py # Vulnerability detection + CLIP + dynamic iterations
+├── evolutionary.py # Evolutionary optimization (mutation-based)
+├── revival.py # DNARefineEngine (DNA revival + pulsed refine)
+├── filters/ # Independent purifier filters
+│ ├── __init__.py
+│ ├── helpers.py
+│ ├── basic.py
+│ ├── contrast_color.py
+│ ├── face.py
+│ ├── background_text_symmetry.py
+│ ├── inpainting.py
+│ └── clip.py
+└── reporting.py # Reports + PDF + visual diff
+
 The design concept was implemented on March 2, 2026
