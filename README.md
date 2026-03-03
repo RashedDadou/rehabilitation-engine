@@ -13,7 +13,7 @@ Is this different from traditional software?
 
 Yes, it differs fundamentally in philosophy and execution , Traditional tools apply fixed transformations or convolutional operations, yielding fast but non-adaptive results. This engine 
 
-# simulates biological revival through:
+## simulates biological revival through: ##
 Focused mutations on negative (dead) zones only, using probabilistic masks derived from Laplacian variance.
 Layered reconstruction (separating luminance and chrominance for precise texture and color recovery).
 Pulsed refinement with hybrid negative prompts (weighted to prevent over-smoothing and semantic drift) and adaptive strength decay.
@@ -22,10 +22,10 @@ This makes it more "alive" and context-aware, though currently experimental and 
 In other words: It differs in approach (genetic-layered revival vs. rule/ML-based), but with further tuning (e.g., integrating ControlNet or wavelet decomposition), it could surpass traditional methods in adaptive quality improvement.
 What are its benefits?
 
-# Experimental and educational: 
+## Experimental and educational: ##
 Serves as a practical demonstration of genetic algorithms combined with perceptual metrics (LPIPS) in image processing, illustrating concepts like multi-scale revival and channel-wise mutation.
 
-# Scalability: 
+## Scalability: ##
 By replacing variance with advanced metrics (e.g., CLIP score or DINO features) and adding a fitness model, it evolves into a self-improving system capable of runtime learning from image context.
 Potential advantage: In images with random or large-scale artifacts (e.g., from SD 1.5 or Midjourney v5 outputs), it achieves unexpected enhancements through directed pulses, potentially outperforming static tools by 40-60% in perceptual fidelity (measured via LPIPS/SSIM).
 
@@ -56,7 +56,7 @@ Highly advanced and conceptually innovative, particularly the fusion of focused 
 The hybrid strength scheduling combined with weighted negative prompting reduces over-refinement and semantic drift by approximately 30–50% compared to simpler inpainting baselines.
 Strict focus on weak and dead regions (via weak_mask + dead_mask computation) makes the system exceptionally effective for images containing large degraded areas — a common failure mode in outputs from older models like SD 1.5 or Midjourney v5.
 
-## Disadvantages & Limitations
+## Disadvantages & Limitations ##
 
 Stability still requires further improvement: random mutations can introduce new noise in 15–25% of edge cases (especially when dead_ratio is high or prompt alignment is poor).
 Multi-pulse performance remains slower on CPU compared to single-pass tools (though still under 4 seconds in most realistic scenarios).
