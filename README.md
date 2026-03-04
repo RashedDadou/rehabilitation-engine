@@ -139,21 +139,25 @@ poetry install
 # Or pip with extras
 pip install -e .[clip,face,inpainting,reporting]
 
-src/rehab_engine/
-├── __init__.py
-├── engine.py # Main class + pipeline logic
-├── diagnostics.py # Vulnerability detection + CLIP + dynamic iterations
-├── evolutionary.py # Evolutionary optimization (mutation-based)
-├── revival.py # DNARefineEngine (DNA revival + pulsed refine)
-├── filters/ # Independent purifier filters
-│ ├── __init__.py
-│ ├── helpers.py
-│ ├── basic.py
-│ ├── contrast_color.py
-│ ├── face.py
-│ ├── background_text_symmetry.py
-│ ├── inpainting.py
-│ └── clip.py
-└── reporting.py # Reports + PDF + visual diff
+GitHub\
+├── __main__.py
+├── rehabilitat_engine\
+│   ├── __init__.py
+│   ├── rehabilitation_engine.py
+│   ├── engine.py
+│   ├── diagnostics.py
+│   ├── evolutionary.py
+│   ├── revival.py
+│   └── reporting.py
+└── rehabilitat_filters\
+    ├── __init__.py
+    ├── rehabilitation_filters.py
+    ├── basic.py
+    ├── face.py
+    ├── contrast_color.py
+    ├── background_text_symmetry.py
+    ├── inpainting.py
+    ├── clip.py
+    ├── helpers.py
 
 The design concept was implemented on March 2, 2026
