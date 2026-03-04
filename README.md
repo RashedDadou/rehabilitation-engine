@@ -151,13 +151,13 @@ GitHub\
 │   └── reporting.py
 └── rehabilitat_filters\
     ├── __init__.py
-    ├── rehabilitation_filters.py
     ├── basic.py
-    ├── face.py
     ├── contrast_color.py
+    ├── face.py
     ├── background_text_symmetry.py
+    ├── helpers.py
     ├── inpainting.py
     ├── clip.py
-    ├── helpers.py
+    └── rehabilitation_filters.py   ← (اللي فيه main)
 
 The design concept was implemented on March 2, 2026
